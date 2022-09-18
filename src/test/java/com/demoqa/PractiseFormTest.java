@@ -29,7 +29,7 @@ public class PractiseFormTest {
         open("/automation-practice-form");
 
         //filed "Name"
-      /*  $("#userName-label").shouldHave(text("Name"));
+      $("#userName-label").shouldHave(text("Name"));
         //$("#firstName").shouldHave(attribute(String.valueOf($("[placeholder=First Name]")), "First Name"));
         //$("#lastName").shouldHave(attribute("[placeholder=Last Name]", "Last Name"));
         $("#firstName").setValue(firstName);
@@ -37,7 +37,7 @@ public class PractiseFormTest {
 
         //field "Email"
         $("#userEmail-label").shouldHave(text("Email"));
-        $("#userEmail").setValue(email);*/
+        $("#userEmail").setValue(email);
 
         //field "Gender"
         $x("//*[@id=\"genterWrapper\"]/div[1]").shouldHave(text("Gender"));
