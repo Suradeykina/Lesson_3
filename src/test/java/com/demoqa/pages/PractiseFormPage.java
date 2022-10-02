@@ -29,7 +29,7 @@ public class PractiseFormPage {
     subjectLabel = $("#subjectsWrapper"),
     subjectInput = $("#subjectsInput"),
     hobbiesLabel = $("#hobbiesWrapper"),
-    hobbiesCheckbox = $("#hobbies-checkbox-3"),
+    hobbiesCheckbox = $("#hobbiesWrapper"),
     currentAddressLabel = $("#currentAddress-label"),
     currentAddressInput = $("#currentAddress"),
     stateCityLabel = $("#stateCity-label"),
@@ -39,7 +39,7 @@ public class PractiseFormPage {
     birthDateInput = $("#dateOfBirthInput"),
     submitButton = $("#submit");
 
-    public PractiseFormPage OpenForm() {
+    public PractiseFormPage openForm() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         executeJavaScript("$('footer').remove()");
@@ -78,9 +78,9 @@ public class PractiseFormPage {
         return this;
     }
 
-    public PractiseFormPage setHobbies() {
+    public PractiseFormPage setHobbies(String value) {
         hobbiesLabel.shouldHave(text("Hobbies"));
-        hobbiesCheckbox.parent().click();
+        hobbiesCheckbox.$(byText(value)).click();
         return this;
     }
 

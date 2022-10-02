@@ -5,7 +5,9 @@ import com.demoqa.pages.PractiseFormPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class PractiseFormTest extends TestData {
+import static com.demoqa.tests.TestData.*;
+
+public class PractiseFormTest {
     PractiseFormPage practiseFormPage = new PractiseFormPage();
 
     @BeforeAll
@@ -16,18 +18,18 @@ public class PractiseFormTest extends TestData {
 
     @Test
     void practiceForm() {
-        practiseFormPage.OpenForm()
+        practiseFormPage.openForm()
                 .setName(firstName, lastName)
                 .setEmail(email)
                 .setGender(gender)
                 .setMobilePhone(mobilePhone)
                 .setSubjects(subject)
-                .setHobbies()
+                .setHobbies(hobbies)
                 .setCurrentAddress(currentAddress)
                 .uploadPicture(file)
+                .setDate(day, month, year)
                 .setState(state)
                 .setCity(city)
-                .setDate(day, month, year)
                 .clickSubmit();
 
         // check results on the table
