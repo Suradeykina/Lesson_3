@@ -1,22 +1,12 @@
 package com.demoqa.tests;
 
-import com.demoqa.helpers.Attach;
 import com.demoqa.pages.PractiseFormPage;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
 public class PractiseFormTest extends TestData {
     PractiseFormPage practiseFormPage = new PractiseFormPage();
-
-    @AfterEach
-    void addAttachments(){
-        //       Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//      //  Attach.addVideo();
-    }
 
     @Test
     void practiceForm() {
